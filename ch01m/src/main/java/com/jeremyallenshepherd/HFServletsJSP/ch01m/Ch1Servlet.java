@@ -8,7 +8,7 @@ import java.io.*;
  * 
  * <p>
  * This exercise is from pages 30-31</br>
- * It is meant to be just a quick guide to writing, deploying, and running a servlet. Take notice how painful it could be 
+ * It is meant to be just a quick guide to writing, deploying, and running a servlet. Take notice of how painful it could be 
  * if we had to write html to the output this way. JSPs will make life easier for us in this regard.
  * </p>
  * 
