@@ -3,6 +3,18 @@ package com.jeremyallenshepherd.HFServletsJSP.ch01m;
 import javax.servlet.http.*;
 import java.io.*;
 
+/**
+ * <p>Ch1Servlet is a very basic servlet that does not even utilize a JSP. It merely writes html to the output response.</p>
+ * 
+ * <p>
+ * This exercise is from pages 30-31</br>
+ * It is meant to be just a quick guide to writing, deploying, and running a servlet. Take notice how painful it could be 
+ * if we had to write html to the output this way. JSPs will make life easier for us in this regard.
+ * </p>
+ * 
+ * @author Jeremy Shepherd
+ *
+ */
 @SuppressWarnings("serial")
 public class Ch1Servlet extends HttpServlet {
 
