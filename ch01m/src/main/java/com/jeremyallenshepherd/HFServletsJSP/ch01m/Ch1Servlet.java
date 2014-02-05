@@ -12,6 +12,11 @@ import java.io.*;
  * if we had to write html to the output this way. JSPs will make life easier for us in this regard.
  * </p>
  * 
+ * <p>
+ * Explanation of @SuppressWarnings -   
+ * The compiler will warn about the absence of a serialVersionUID and this is beyond the scope of this demo, hence it is suppressed
+ * </p>
+ * 
  * @author Jeremy Shepherd
  *
  */
