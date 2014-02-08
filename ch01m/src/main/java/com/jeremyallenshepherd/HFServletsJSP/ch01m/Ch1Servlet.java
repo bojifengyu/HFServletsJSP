@@ -7,7 +7,7 @@ import java.io.*;
  * <p>Ch1Servlet is a very basic servlet that does not even utilize a JSP. It merely writes html to the output response.</p>
  * 
  * <p>
- * This exercise is from pages 30-31</br>
+ * This exercise is from pages 30-31 of the book Head First Servlets &amp; JSP</br>
  * It is meant to be just a quick guide to writing, deploying, and running a servlet. Take notice of how painful it could be 
  * if we had to write html to the output this way. JSPs will make life easier for us in this regard.
  * </p>

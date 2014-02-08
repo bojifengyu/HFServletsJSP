@@ -6,9 +6,12 @@
 	
 	<packaging>war</packaging>
 	
-	<name>ch01m</name>
+	<name>Head First Servlets and JSP Chapter 01</name>
 	
-	<description>Mavenized conversion of ch01 project</description>
+	<description>
+		This project contains the webapps from the book Head First Servlets &amp; JSP Chapter 1. The programs 
+		have been mavenized and contain additional comments and javadoc
+	</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,13 +33,11 @@
 	</dependencies>
 	
 	<build>
+		<finalName>studies#HFServletsJSP#${artifactId}##${version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
