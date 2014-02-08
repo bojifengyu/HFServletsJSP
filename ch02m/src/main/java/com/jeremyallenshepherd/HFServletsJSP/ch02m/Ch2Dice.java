@@ -23,6 +23,7 @@ public class Ch2Dice extends HttpServlet {
 	public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
 		
 		String d1 = Integer.toString((int) ((Math.random() * 6) + 1));
 		String d2 = Integer.toString((int) ((Math.random() * 6) + 1));

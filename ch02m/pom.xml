@@ -33,7 +33,7 @@
 	</dependencies>
 	
 	<build>
-		<finalName>studies#HFServletsJSP#${artifactId}##${version}</finalName>
+		<finalName>studies#HFServletsJSP#${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
