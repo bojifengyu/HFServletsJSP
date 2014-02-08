@@ -28,6 +28,7 @@ public class Ch1Servlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		java.util.Date today = new java.util.Date();
+		response.setContentType("text/html");
 		out.println(
 				"<!DOCTYPE html>" +
 				"<html>" +
