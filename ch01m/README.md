@@ -9,6 +9,14 @@ It is meant to be just a quick guide to writing, deploying, and running a servle
 if we had to write html to the output this way. JSPs will make life easier for us in this regard.
 </p>
 
+<p>There are a few minor changes from the book example.
+<ul>
+	<li>The html syntax is html 5 compliant</li>
+	<li>The web.xml uses slightly different, but more descriptive values than the book example</li>
+	<li>The url pattern in the web.xml is wildcarded to /* to make the servlet the default servlet of the webapp</li>
+</ul>
+</p>
+
 <h4>Maven Notes</h4>
 <p>
 Take notice of the <code>&lt;finalName&gt;</code> in the pom.xml.  This tag makes use of # symbol in the 
