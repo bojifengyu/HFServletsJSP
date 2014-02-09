@@ -2,11 +2,17 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Request File Download</title>
+	<title>Request File Download and Redirects</title>
 </head>
 <body>
-<h1 style="text-align: center;">Chapter 4 File Download</h1>
+<h1 style="text-align: center;">Chapter 4 File Download and Redirects</h1>
 <a href="Code.do">Download File</a>
-
+<span>(download a file called bookCode.jar)</span><br/>
+<a href="RedirectExercise1.do">Let's call a servlet which will do a relative redirect</a>
+<span>(Link will call a servlet which will redirect to this webapp's foo/stuff.html file)</span><br/>
+<a href="RedirectExercise2.do">Let's call a servlet which will do a redirect relative to the web container</a>
+<span>(Link will call a servlet which will redirect to the chapter 1 servlet)</span><br/>
+<a href="RequestDispatchExercise.do">Let's do a request dispatch instead of a redirect</a>
+<span>(Link will call a servlet which will do a request dispatch to a JSP)</span>
 </body>
 </html>

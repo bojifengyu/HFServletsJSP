@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-	
 	<display-name>Head First Servlets and JSP Chapter 4</display-name>
 	<welcome-file-list>
 		<welcome-file>/download.html</welcome-file>
@@ -13,5 +12,31 @@
 	<servlet-mapping>
 		<servlet-name>Chapter4 File Download</servlet-name>
 		<url-pattern>/Code.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Chapter4 Redirect Exercise1</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch04m.web.RedirectExercise1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Chapter4 Redirect Exercise1</servlet-name>
+		<url-pattern>/RedirectExercise1.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Chapter4 Redirect Excercise2</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch04m.web.RedirectExercise2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Chapter4 Redirect Excercise2</servlet-name>
+		<url-pattern>/RedirectExercise2.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RequestDispatchExercise</display-name>
+		<servlet-name>RequestDispatchExercise</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch04m.web.RequestDispatchExercise</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RequestDispatchExercise</servlet-name>
+		<url-pattern>/RequestDispatchExercise.do</url-pattern>
 	</servlet-mapping>
 </web-app>
