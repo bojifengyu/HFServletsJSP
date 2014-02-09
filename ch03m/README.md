@@ -17,6 +17,7 @@ product of the chapter (called version three in the book).
 	<li>A welcome-file is specified in the web.xml to direct any request of the basic domain.com/studies/HFServlets/ch03m to the form.html</li>
 	<li>Package names have been changed to reflect my own tastes</li>
 	<li>The project organization has been altered to conform to the Maven Standard Directory Layout</li>
+	<li>Character encoding set to UTF-8 in the servlet</li>
 </ul>
 </p>
 

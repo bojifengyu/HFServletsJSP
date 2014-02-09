@@ -16,7 +16,7 @@ if we had to write html to the output this way. JSPs will make life easier for u
 	<li>The url pattern in the web.xml is wildcarded to /* to make the servlet the default servlet of the webapp</li>
 	<li>Packages are used in this project. The book did not use packages</li>
 	<li>The project organization has been altered to conform to the Maven Standard Directory Layout</li>
-	<li>Explicitly set the response content type to text/html</li>
+	<li>Explicitly set the response content type to text/html and the encoding to UTF-8</li>
 </ul>
 </p>
 
