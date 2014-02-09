@@ -1,4 +1,5 @@
 package com.jeremyallenshepherd.HFServletsJSP.ch02m;
+
 import javax.servlet.http.*;
 import java.io.*;
 
@@ -22,8 +23,9 @@ public class Ch2Dice extends HttpServlet {
 	
 	public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
 		
 		String d1 = Integer.toString((int) ((Math.random() * 6) + 1));
 		String d2 = Integer.toString((int) ((Math.random() * 6) + 1));
