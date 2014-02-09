@@ -1,9 +1,16 @@
 <h2>Chapter 4 Project from the book, Head First Servlets &amp; JSP</h2>
 
-<p>This project consists of a basic servlet which returns a particular file called bookCode.jar in a response
+<p>This project consists of couple of simple servlets 
+<ul>
+	<li>CodeReturn - returns a particular file called bookCode.jar in a response</li>
+	<li>RedirectExercise1 - does a redirect relative to the webapp
+	<li>RedirectExercise2 - does a redirect relative to the web container</li>
+	<li>RequestDispatchExercise - does a request dispatch to a jsp</li>
+</ul>
 </p>
 
-<p>This exercise is from Chapter 4, pages 128-129.<br/>
+<p>These exercises are from Chapter 4, pages 128-129 (CodeReturn), and page 136 (RedirectExercises), and page 138 (RequestDispatch)
+<br/>
 Some things to grasp in this exercise:
 <ul>
 	<li>CodeReturn servlet sets the content type to something other than text/html, in this case the response is an jar file so
@@ -21,6 +28,7 @@ Some things to grasp in this exercise:
 	<li>Package names have been changed to reflect my own tastes</li>
 	<li>The project organization has been altered to conform to the Maven Standard Directory Layout</li>
 	<li>Character encoding set to UTF-8 in the servlet</li>
+	<li>The redirect and Request Dispatch exercises are my own contrivance based on book material presented</li>
 </ul>
 </p>
 
