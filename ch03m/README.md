@@ -4,7 +4,7 @@
 and at long last utilizes a JSP. 
 </p>
 
-<p>This exercise is from the Chapter 3, pages 67-91. The whole chapter is about building this simple app</br>
+<p>This exercise is from Chapter 3, pages 67-91. The whole chapter is about building this simple app</br>
 This is a full blown webapp (a very simple one) with a servlet, a model class, an html form, and a JSP for the response. 
 The whole Chapter 3 is about guiding the reader in building this webapp from the ground up. The code here is the final
 product of the chapter (called version three in the book).
