@@ -23,9 +23,8 @@ product of the chapter (called version three in the book).
 
 <h4>Notes</h4>
 <p>
-Take note that the result.jsp uses a scriptlet (the java code between <code><% ... %></code>), which is not a good practice and is
-generally considered bad form. It is present because that is how it is presented in the book and the book eventually explains that this is
-bad.
+Take note that the result.jsp uses a scriptlet (the java code between <code>&lt;% ... %&gt;</code>), which is not a good practice 
+and is generally considered bad form. It is present because that is how it is presented in the book and the book eventually explains that this is bad.
 </p>
 
 <h4>Maven Notes</h4>
