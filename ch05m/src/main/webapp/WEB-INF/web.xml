@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-	
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
 	<display-name>Head First Servlets and JSP Chapter 5</display-name>
-	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
 	<session-config>
 		<session-timeout>1</session-timeout>
 	</session-config>
-	
 	<listener>
 		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch05m.MyServletContextListener</listener-class>
 	</listener>
-	
 	<servlet>
 		<description>Tests the ServletContextListener</description>
 		<display-name>ListenerTester</display-name>
@@ -22,31 +22,38 @@
 		<servlet-name>ListenerTester</servlet-name>
 		<url-pattern>/ListenTest.do</url-pattern>
 	</servlet-mapping>
-	
 	<context-param>
 		<param-name>breed</param-name>
 		<param-value>Great Dane</param-value>
 	</context-param>
-	
+	<context-param>
+		<param-name>my context param</param-name>
+		<param-value>the value of my context param</param-value>
+	</context-param>
 	<servlet>
 		<description>Servlet to test init params from the Servlet Config</description>
-		<display-name>BeerParamTests</display-name>
-		<servlet-name>BeerParamTests</servlet-name>
+		<servlet-name>InitParamsTests</servlet-name>
 		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch05m.TestInitParams</servlet-class>
 		<init-param>
-			<description></description>
 			<param-name>adminEmail</param-name>
 			<param-value>likewecare@wickedlysmart.com</param-value>
 		</init-param>
 		<init-param>
-			<description></description>
 			<param-name>mainEmail</param-name>
 			<param-value>blooper@wickedlysmart.com</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>BeerParamTests</servlet-name>
-		<url-pattern>/Tester.do</url-pattern>
+		<servlet-name>InitParamsTests</servlet-name>
+		<url-pattern>/TestInitParams.do</url-pattern>
 	</servlet-mapping>
-	
+	<servlet>
+		<description>Servlet to test context params from the Servlet Context</description>
+		<servlet-name>ContextParamsTests</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch05m.TestContextParams</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ContextParamsTests</servlet-name>
+		<url-pattern>/TestContextParams.do</url-pattern>
+	</servlet-mapping>
 </web-app>

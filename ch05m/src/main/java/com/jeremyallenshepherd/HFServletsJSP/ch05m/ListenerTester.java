@@ -10,14 +10,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ListenerTester
+ * Servlet implementation class ListenerTester<br>
+ * 
+ * <p>
+ * This is the class that tests the ServletContextListener. If everything is working right, by the time the
+ * Servlet's doGet() method runs for the first time, the Dog object will be waiting as an attribute in the 
+ * ServletContext
+ * </p>
+ * 
+ * @author Jeremy Shepherd
  */
 @SuppressWarnings("serial")
 public class ListenerTester extends HttpServlet {
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
