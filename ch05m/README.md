@@ -31,8 +31,7 @@ These exercises are from Chapter 5<br/>
 
 <h4>Note</h4>
 <p>
-We haven't gotten to the JSP chapter yet, so JSP are still being avoided.  Don't worry, the JSP chapter is the
-next chapter, Woo-Hoo!
+We haven't gotten to the JSP chapter yet, so JSP are still being avoided.  Don't worry, they're coming...
 </p>
 
 <h4>Maven Notes</h4>
