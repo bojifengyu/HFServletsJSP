@@ -29,19 +29,10 @@ public class ListenerTester extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		HttpSession session = request.getSession();
-		
 		out.println("test context attributes set by listener<br>");
 		out.println("<br>");
 		Dog dog = (Dog) getServletContext().getAttribute("dog");
 		out.println("dog breed is: " + dog.getBreed());
-		
-		session.setAttribute("Dog", dog);
-		
-		if (session.isNew())
-			out.println("<br>This is a new session.");
-		else
-			out.println("<br>Welcome Back!");
 	}
 
 }

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TestContextParams
+ * This Servlet is an exercise for demonstrating context parameters
  * 
  * @author Jeremy Shepherd
  */
@@ -22,15 +22,16 @@ public class TestContextParams extends HttpServlet {
 			throws ServletException, IOException {
 		
 		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("Test Context Parameters<br>");
 		
 		Enumeration<?> contextParams = getServletContext().getInitParameterNames();
 		while (contextParams.hasMoreElements()) {
-			out.print("<br>context param name = " + contextParams.nextElement() + "<br>");
+			String contextParam = (String) contextParams.nextElement();
+			out.print("<br>context param name = " + contextParam + "<br>");
+			out.print("context param value = " + getServletContext().getInitParameter(contextParam) + "<br>");
 		}
-		out.println("<br>breed is " + getServletContext().getInitParameter("breed") + "<br>");
-		out.println("<br>my context param is " + getServletContext().getInitParameter("my context param") + "<br>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

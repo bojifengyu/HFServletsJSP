@@ -27,8 +27,8 @@
 		<param-value>Great Dane</param-value>
 	</context-param>
 	<context-param>
-		<param-name>my context param</param-name>
-		<param-value>the value of my context param</param-value>
+		<param-name>foo</param-name>
+		<param-value>bar</param-value>
 	</context-param>
 	<servlet>
 		<description>Servlet to test init params from the Servlet Config</description>
