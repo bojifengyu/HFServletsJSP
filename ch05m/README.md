@@ -38,7 +38,7 @@ next chapter, Woo-Hoo!
 <h4>Maven Notes</h4>
 <p>
 Take notice of the <code>&lt;finalName&gt;</code> in the pom.xml.  This tag makes use of # symbol in the 
-construction of the .war file name so the actual filename would end up being studies#HFServletsJSP#ch04m.war</br>
-This will make the app deploy to the directory structure:  /studies/HFServletsJSP/ch04m in the webapp 
+construction of the .war file name so the actual filename would end up being studies#HFServletsJSP#ch05m.war</br>
+This will make the app deploy to the directory structure:  /studies/HFServletsJSP/ch05m in the webapp 
 container. 
 </p>
