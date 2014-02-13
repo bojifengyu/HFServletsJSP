@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+		<welcome-file>SessionURLRewriting.do</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>Ch6 Cookie Test</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.CookieTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch6 Cookie Test</servlet-name>
+		<url-pattern>/CookieTest.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Ch6 CheckCookie</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.CheckCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch6 CheckCookie</servlet-name>
+		<url-pattern>/CheckCookie.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Ch6 Exercise to check on whether the request.getSession() method created a new session or used an already existing session</description>
+		<display-name>Ch6 SessionNewOrExistingCheck</display-name>
+		<servlet-name>Ch6 SessionNewOrExistingCheck</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.SessionNewOrExistingCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch6 SessionNewOrExistingCheck</servlet-name>
+		<url-pattern>/SessionNewOrExistingCheck.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Ch6 Exercise to test the request.getSession(false) method so you can do logic only if there is a pre-existing session</description>
+		<display-name>SessionPreExistingOnlyCheck</display-name>
+		<servlet-name>Ch6 SessionPreExistingOnlyCheck</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.SessionPreExistingOnlyCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch6 SessionPreExistingOnlyCheck</servlet-name>
+		<url-pattern>/SessionPreExistingOnlyCheck.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>SessionURLRewriting</display-name>
+		<servlet-name>Ch6 SessionURLRewriting</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.SessionURLRewriting</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch6 SessionURLRewriting</servlet-name>
+		<url-pattern>/SessionURLRewriting.do</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.BeerSessionCounter</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.BeerAttributeListener</listener-class>
+	</listener>
+</web-app>
