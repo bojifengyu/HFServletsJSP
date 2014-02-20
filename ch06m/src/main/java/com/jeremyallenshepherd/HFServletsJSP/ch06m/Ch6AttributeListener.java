@@ -4,10 +4,10 @@ import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionBindingEvent;
 
 /**
- * Application Lifecycle Listener implementation class BeerAttributeListener
+ * Application Lifecycle Listener implementation class Ch6AttributeListener
  * 
  */
-public class BeerAttributeListener implements HttpSessionAttributeListener {
+public class Ch6AttributeListener implements HttpSessionAttributeListener {
 
 	/**
 	 * @see HttpSessionAttributeListener#attributeRemoved(HttpSessionBindingEvent)
@@ -24,7 +24,7 @@ public class BeerAttributeListener implements HttpSessionAttributeListener {
 	public void attributeAdded(HttpSessionBindingEvent event) {
 		String name = event.getName();
 		Object value = event.getValue();
-		System.out.println("Attribute added: " + name + ": " + value);
+		System.out.println("Attribute added: " + name + " : " + value);
 	}
 
 	/**
@@ -33,7 +33,7 @@ public class BeerAttributeListener implements HttpSessionAttributeListener {
 	public void attributeReplaced(HttpSessionBindingEvent event) {
 		String name = event.getName();
 		Object value = event.getValue();
-		System.out.println("Attribute replaced: " + name + ": " + value);
+		System.out.println("Attribute replaced: " + name + " : " + value);
 	}
 
 }

@@ -7,35 +7,27 @@
 	</session-config>
 	
 	<welcome-file-list>
-		<welcome-file>SessionURLRewriting.do</welcome-file>
+		<welcome-file>Index.do</welcome-file>
 	</welcome-file-list>
 	
 	<servlet>
-		<servlet-name>Ch6 Cookie Test</servlet-name>
+		<servlet-name>Chapter 6 Cookie Test</servlet-name>
 		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.CookieTest</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Ch6 Cookie Test</servlet-name>
+		<servlet-name>Chapter 6 Cookie Test</servlet-name>
 		<url-pattern>/CookieTest.do</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
-		<servlet-name>Ch6 CheckCookie</servlet-name>
+		<servlet-name>Chapter 6 CheckCookie</servlet-name>
 		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.CheckCookie</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Ch6 CheckCookie</servlet-name>
+		<servlet-name>Chapter 6 CheckCookie</servlet-name>
 		<url-pattern>/CheckCookie.do</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<description>Ch6 Exercise to check on whether the request.getSession() method created a new session or used an already existing session</description>
-		<display-name>Ch6 SessionNewOrExistingCheck</display-name>
-		<servlet-name>Ch6 SessionNewOrExistingCheck</servlet-name>
-		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.SessionNewOrExistingCheck</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Ch6 SessionNewOrExistingCheck</servlet-name>
-		<url-pattern>/SessionNewOrExistingCheck.do</url-pattern>
-	</servlet-mapping>
+	
 	<servlet>
 		<description>Ch6 Exercise to test the request.getSession(false) method so you can do logic only if there is a pre-existing session</description>
 		<display-name>SessionPreExistingOnlyCheck</display-name>
@@ -46,20 +38,22 @@
 		<servlet-name>Ch6 SessionPreExistingOnlyCheck</servlet-name>
 		<url-pattern>/SessionPreExistingOnlyCheck.do</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
-		<description></description>
-		<display-name>SessionURLRewriting</display-name>
-		<servlet-name>Ch6 SessionURLRewriting</servlet-name>
-		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.SessionURLRewriting</servlet-class>
+		<display-name>Main Driver</display-name>
+		<servlet-name>Chapter 6 MainController</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.MainController</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Ch6 SessionURLRewriting</servlet-name>
-		<url-pattern>/SessionURLRewriting.do</url-pattern>
+		<servlet-name>Chapter 6 MainController</servlet-name>
+		<url-pattern>/Index.do</url-pattern>
 	</servlet-mapping>
+	
 	<listener>
-		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.BeerSessionCounter</listener-class>
+		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.Ch6SessionListener</listener-class>
 	</listener>
 	<listener>
-		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.BeerAttributeListener</listener-class>
+		<listener-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.Ch6AttributeListener</listener-class>
 	</listener>
+	
 </web-app>

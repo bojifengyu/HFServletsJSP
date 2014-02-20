@@ -4,10 +4,10 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 /**
- * Application Lifecycle Listener implementation class BeerSessionCounter
+ * Application Lifecycle Listener implementation class Ch6SessionListener
  * 
  */
-public class BeerSessionCounter implements HttpSessionListener {
+public class Ch6SessionListener implements HttpSessionListener {
 
 	private static int activeSessions;
 	
@@ -23,6 +23,9 @@ public class BeerSessionCounter implements HttpSessionListener {
 	 */
 	public void sessionCreated(HttpSessionEvent arg0) {
 		activeSessions++;
+		// Whenever a session gets created, make sure that it has the myDog attribute with value Geordi!
+		String dog = "Geordi";
+		arg0.getSession().setAttribute("myDog", dog);
 	}
 
 	/**

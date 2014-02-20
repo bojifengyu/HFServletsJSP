@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class SessionNewOrExistingCheck
+ * 
  */
 @SuppressWarnings("serial")
 public class SessionPreExistingOnlyCheck extends HttpServlet {
@@ -22,17 +22,22 @@ public class SessionPreExistingOnlyCheck extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("test pre-existing session<br>");
+		out.println("<h1 style=\"text-align: center;\">Chapter 6 - test pre-existing session</h1>");
 		
 		// In the real world, the only time you'd want to use getSession(false) is if you do NOT want to create a new session
 		HttpSession session = request.getSession(false);
 		
 		if (session == null) {
-			out.println("no session was available");
-			out.println("making one...");
+			out.println("<p>no session was available<br>");
+			out.println("making one...</p>");
 			session = request.getSession();
 		} else
 			out.println("There was a session!");
+		
+		out.println("<p><a href=\"" + response.encodeURL("Index.do") + "\">Go back to Chapter 6 Index</a></p>");
+		int activeSessionCount = Ch6SessionListener.getActiveSessions();
+		out.println("<p>active sessions = " + activeSessionCount + "</p>");
+
 	}
 
 }

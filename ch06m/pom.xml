@@ -8,7 +8,7 @@
 	<name>Head First Servlets and JSP Chapter 06</name>
 	
 	<description>
-		This project contains the webapps from the book Head First Servlets &amp; JSP Chapter 5. The programs 
+		This project contains the webapps from the book Head First Servlets &amp; JSP Chapter 6. The programs 
 		have been mavenized and contain additional comments and javadoc
 	</description>
 	
@@ -28,6 +28,11 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 	</dependencies>
 	
