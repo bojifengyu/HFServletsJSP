@@ -28,10 +28,12 @@ public class ListenerTester extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
+		out.println("<html><body><h1 style=\"text-align: center;\">Chapter 5 - Listeners</h1>");
 		out.println("test context attributes set by listener<br>");
 		out.println("<br>");
 		Dog dog = (Dog) getServletContext().getAttribute("dog");
 		out.println("dog breed is: " + dog.getBreed());
+		out.println("</body></html>");
 	}
 
 }
