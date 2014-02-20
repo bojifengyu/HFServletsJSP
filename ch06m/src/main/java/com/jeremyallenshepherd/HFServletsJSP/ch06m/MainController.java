@@ -36,8 +36,13 @@ public class MainController extends HttpServlet {
 		}
 		out.println("<a href=\"" + response.encodeRedirectURL("SessionPreExistingOnlyCheck.do") + "\">click me (encodeRedirectURL) to SessionPreExistingOnlyCheck.do</a><br>");
 		out.println("<a href=\"" + response.encodeURL("CookieTest.do") + "\">click me (encodeURL) to CookieTest.do</a><br>");
-//		out.println("<a href=\"" + response.encodeRedirectURL("../ch03/form.html") + "\">click me (encodeRedirectURL) to the Beer app</a><br>");
-//		out.println("<a href=\"" + response.encodeURL("../ch05/ListenTest.do") + "\">click me (encodeRedirectURL) to ListenTest.do</a><br>");
+		
+		// the session will be lost if you follow either of the two links below because they are in different web apps
+		// with different contexts and you can't share sessions between contexts
+		out.println("<br>The session will be lost if you follow eighter of the next two links because they are in different web apps with different contexts<br>");
+		out.println("<a href=\"" + response.encodeRedirectURL("../ch03m/form.html") + "\">click me (encodeRedirectURL) to go to the Beer app of chapter 3</a><br>");
+		out.println("<a href=\"" + response.encodeURL("../ch05m/ListenTest.do") + "\">click me (encodeRedirectURL) to ListenTest.do</a><br>");
+		
 		out.println("<br>active sessions = " + activeSessionCount + "<br>");
 		out.println("</body></html>");
 	}
