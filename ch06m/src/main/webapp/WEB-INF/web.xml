@@ -29,6 +29,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>Chapter 6 Dog In Session</servlet-name>
+		<servlet-class>com.jeremyallenshepherd.HFServletsJSP.ch06m.DogControl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Chapter 6 Dog In Session</servlet-name>
+		<url-pattern>/DogInSession.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<description>Ch6 Exercise to test the request.getSession(false) method so you can do logic only if there is a pre-existing session</description>
 		<display-name>SessionPreExistingOnlyCheck</display-name>
 		<servlet-name>Ch6 SessionPreExistingOnlyCheck</servlet-name>

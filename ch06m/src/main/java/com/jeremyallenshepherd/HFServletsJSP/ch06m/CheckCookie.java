@@ -29,12 +29,12 @@ public class CheckCookie extends HttpServlet {
 				Cookie cookie = cookies[i];
 				if (cookie.getName().equals("myTestCookie")) {
 					cookieValue = cookie.getValue();
-					out.println("Hello " + cookieValue);
+					out.println("Cookie Name: " + cookie.getName() + " Cookie Value: " + cookieValue);
 					break;
 				}
 			}
 			if (cookieValue.equals(""))
-				out.println("I don't know you, sorry!");
+				out.println("I don't know any valid cookies");
 		} else {
 			out.println("You have your cookies disabled you dolt!");
 		}

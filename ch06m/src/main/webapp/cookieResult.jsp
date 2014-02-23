@@ -10,6 +10,9 @@
 </head>
 <body>
 	<h1 style="text-align: center;">Chapter 6 Cookie Test</h1>
+	<p>
+		A cookie has been created and placed in your browser<br>
+	</p>
 	<p><a href="<c:url value='/CheckCookie.do' />">Check the cookie</a></p>
 	<p><a href="<c:url value='/Index.do' />">Back to Chapter 6 index</a></p>
 </body>
