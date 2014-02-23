@@ -24,7 +24,11 @@
 	</servlet-mapping>
 	<context-param>
 		<param-name>breed</param-name>
-		<param-value>Great Dane</param-value>
+		<param-value>Golden Retriever</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dogName</param-name>
+		<param-value>Geordi</param-value>
 	</context-param>
 	<context-param>
 		<param-name>foo</param-name>
