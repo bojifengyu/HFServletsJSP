@@ -15,15 +15,37 @@ import javax.servlet.http.HttpSessionBindingListener;
 public class Dog implements HttpSessionBindingListener{
 
 	private String breed;
+	private String name;
 	
-	public Dog(String breed) {
+	public Dog() {
+		//no-arg constructor
+	}
+	
+	public Dog(String name) {
+		this.name = name;
+	}
+	
+	public Dog(String name, String breed) {
+		this.name = name;
 		this.breed = breed;
 	}
 	
 	public String getBreed() {
 		return breed;
 	}
+	
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 	public void valueBound(HttpSessionBindingEvent event) {
 		System.out.println("Dog added to session");
 	}
@@ -31,4 +53,5 @@ public class Dog implements HttpSessionBindingListener{
 	public void valueUnbound(HttpSessionBindingEvent event) {
 		System.out.println("Dog removed from session");
 	}
+
 }
