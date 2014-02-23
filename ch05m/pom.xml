@@ -49,6 +49,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
 				<executions>
 					<execution>
 						<id>make-a-jar</id>
@@ -56,12 +57,16 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
+						<configuration>
+							<finalName>${project.artifactId}-${project.version}</finalName>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.1</version>
 				<executions>
 					<execution>
 						<phase>install</phase>
