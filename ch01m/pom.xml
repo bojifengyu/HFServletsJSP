@@ -15,6 +15,7 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<m2eclipse.wtp.contextRoot>/studies/HFServletsJSP/ch01m</m2eclipse.wtp.contextRoot>
 	</properties>
 	
 	<dependencies>
