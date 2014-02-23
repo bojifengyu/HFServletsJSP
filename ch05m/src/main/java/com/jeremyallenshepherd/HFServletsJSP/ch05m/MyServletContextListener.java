@@ -24,7 +24,8 @@ public class MyServletContextListener implements ServletContextListener {
 
 		ServletContext sc = event.getServletContext();
 		String dogBreed = sc.getInitParameter("breed");
-		Dog d = new Dog(dogBreed);
+		String dogName = sc.getInitParameter("dogName");
+		Dog d = new Dog(dogName, dogBreed);
 		sc.setAttribute("dog", d);
 	}
 
