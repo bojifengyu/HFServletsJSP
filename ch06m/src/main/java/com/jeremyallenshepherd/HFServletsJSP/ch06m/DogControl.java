@@ -23,12 +23,12 @@ public class DogControl extends HttpServlet {
 		out.println("<html><body><h1 style=\"text-align: center;\">Chapter 6 - Sessions - Cookies - Listeners</h1>");
 
 		Dog dog;
-		if (session.getAttribute("myDog") != null) {
+		if (session.getAttribute("myDogObject") == null) {
 			dog = new Dog("Geordi", "Golden Retriever");
-			session.setAttribute("myDog", dog);
+			session.setAttribute("myDogObject", dog);
 			out.println("Your dog object has just been created and placed in session. Name: " + dog.getName() + " Breed: " + dog.getBreed());
 		} else {
-			dog = (Dog) session.getAttribute("myDog");
+			dog = (Dog) session.getAttribute("myDogObject");
 			out.println("Your dog object is still in the session. Name: " + dog.getName() + " Breed: " + dog.getBreed());
 		}
 		

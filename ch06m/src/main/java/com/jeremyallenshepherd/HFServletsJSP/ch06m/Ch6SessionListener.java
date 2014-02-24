@@ -25,7 +25,7 @@ public class Ch6SessionListener implements HttpSessionListener {
 		activeSessions++;
 		// Whenever a session gets created, make sure that it has the myDog attribute with value Geordi!
 		String dog = "Voltaire";
-		arg0.getSession().setAttribute("myDog", dog);
+		arg0.getSession().setAttribute("myDogString", dog);
 	}
 
 	/**
