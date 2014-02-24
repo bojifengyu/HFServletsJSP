@@ -47,11 +47,11 @@ public class Dog implements HttpSessionBindingListener{
 	}
 	
 	public void valueBound(HttpSessionBindingEvent event) {
-		System.out.println("Dog added to session");
+		System.out.println("Dog " + name + " added to session");
 	}
 
 	public void valueUnbound(HttpSessionBindingEvent event) {
-		System.out.println("Dog removed from session");
+		System.out.println("Dog " + name + " removed from session");
 	}
 
 }
