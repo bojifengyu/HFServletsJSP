@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Head First Servlets/JSP Chapter 7 - JSPs</title>
+<title>CounterV1 Ch07 Exercise</title>
 </head>
 <body>
 	<h1 style="text-align: center;">Head First Servlets/JSP Chapter 7 - JSPs</h1>
