@@ -14,5 +14,7 @@
 	<a href="<c:url value='/forward?page=CounterV3' />">Link to CounterV3.jsp</a><br>
 	<a href="<c:url value='/forward?page=CounterV4' />">Link to CounterV4.jsp</a><br>
 	<a href="<c:url value='/forward?page=HobbyForm' />">Link to HobbyForm.jsp</a><br>
+	<a href="<c:url value='/forward?page=TestInit' />">Link to TestInit.jsp</a><br>
+	<a href="<c:url value='/forward?page=TestInitEL' />">Link to TestInitEL.jsp</a><br>
 </body>
 </html>

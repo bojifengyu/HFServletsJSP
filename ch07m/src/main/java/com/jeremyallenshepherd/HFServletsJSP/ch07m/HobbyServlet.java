@@ -16,17 +16,19 @@ public class HobbyServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
 		ArrayList<String> al = new ArrayList<String>();
-		al.add("Fred");
-		al.add("Pradeep");
-		al.add("Philippe");
+		String hobby = (String) request.getParameter("hobby");
+		if (hobby.equals("extreme knitting")) {
+			al.add("Fred");
+			al.add("Pradeep");
+			al.add("Philippe");
+		} else {
+			al.add("No friends enjoy this!");
+		}
 
 		request.setAttribute("names", al);
 

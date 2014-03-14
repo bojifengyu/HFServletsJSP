@@ -22,6 +22,18 @@
 		</init-param>
 	</servlet>
 	<servlet-mapping>
+		<servlet-name>MyTestInitWithEL</servlet-name>
+		<url-pattern>/TestInitEL.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MyTestInitWithEL</servlet-name>
+		<jsp-file>/TestInitEL.jsp</jsp-file>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>iam@wickedlysmart.com</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
 		<servlet-name>MyTestInit</servlet-name>
 		<url-pattern>/TestInit.jsp</url-pattern>
 	</servlet-mapping>
