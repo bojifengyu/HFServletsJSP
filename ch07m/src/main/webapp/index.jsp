@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8">
+<meta charset="UTF-8">
 <title>Head First Servlets/JSP Chapter 7 - JSPs</title>
 </head>
 <body>
