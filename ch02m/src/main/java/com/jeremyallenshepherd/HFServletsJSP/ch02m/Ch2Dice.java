@@ -1,7 +1,11 @@
 package com.jeremyallenshepherd.HFServletsJSP.ch02m;
 
-import javax.servlet.http.*;
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
