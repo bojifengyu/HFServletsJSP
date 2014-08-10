@@ -1,7 +1,12 @@
 package com.jeremyallenshepherd.HFServletsJSP.ch01m;
 
-import javax.servlet.http.*;
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>Ch1Servlet is a very basic servlet that does not even utilize a JSP. It merely writes html to the output response.</p>
@@ -29,7 +34,7 @@ public class Ch1Servlet extends HttpServlet {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
-		java.util.Date today = new java.util.Date();
+		Date today = new Date();
 		out.println(
 				"<!DOCTYPE html>" +
 				"<html>" +
