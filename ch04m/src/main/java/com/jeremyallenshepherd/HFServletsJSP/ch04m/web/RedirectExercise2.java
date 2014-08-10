@@ -19,7 +19,7 @@ public class RedirectExercise2 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.sendRedirect("/studies/HFServletsJSP/ch01m"); // redirect relative to this web container
+		response.sendRedirect("/Studies/Java/HFServletsJSP/ch01m"); // redirect relative to this web container
 	}
 
 	/**
