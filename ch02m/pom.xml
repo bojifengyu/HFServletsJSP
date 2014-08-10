@@ -56,7 +56,7 @@
 			<!-- ${project.artifactId}-${project.version}.${project.packaging}. The other war file in -->
 			<!-- the tomcat-war execution is named especially for a no config deployment to a tomcat -->
 			<!-- container. The tomcat-war filename will dictate a web app context of -->
-			<!-- /Studies/Java/HFServletsJSP/ch01m. Both files contain exactly the same content, they -->
+			<!-- /Studies/Java/HFServletsJSP/ch02m. Both files contain exactly the same content, they -->
 			<!-- just have different names. -->
 			<!-- ================================================================================= -->
 			<plugin>
