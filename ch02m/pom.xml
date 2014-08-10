@@ -1,52 +1,101 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jeremyallenshepherd.HFServletsJSP</groupId>
 	<artifactId>ch02m</artifactId>
 	<version>1.0</version>
-	
 	<packaging>war</packaging>
-	
+
 	<name>Head First Servlets and JSP Chapter 02</name>
-	
+
 	<description>
 		This project contains the webapps from the book Head First Servlets &amp; JSP Chapter 2. The programs 
 		have been mavenized and contain additional comments and javadoc
 	</description>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<m2eclipse.wtp.contextRoot>/studies/HFServletsJSP/ch02m</m2eclipse.wtp.contextRoot>
+		<project.java.version>1.7</project.java.version>
+		<m2eclipse.wtp.contextRoot>/Studies/Java/HFServletsJSP/ch02m</m2eclipse.wtp.contextRoot>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-		<finalName>studies#HFServletsJSP#${project.artifactId}</finalName>
 		<plugins>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.3</version>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<compilerVersion>${project.java.version}</compilerVersion>
+					<source>${project.java.version}</source>
+					<target>${project.java.version}</target>
+				</configuration>
+			</plugin>
+			<!-- ================================================================================= -->
+			<!-- War Plugin -->
+			<!-- This plugin has two executions for the purpose of producing two differently named -->
+			<!-- war files. One war file in the normal-war execution is named according to the default -->
+			<!-- ${project.artifactId}-${project.version}.${project.packaging}. The other war file in -->
+			<!-- the tomcat-war execution is named especially for a no config deployment to a tomcat -->
+			<!-- container. The tomcat-war filename will dictate a web app context of -->
+			<!-- /Studies/Java/HFServletsJSP/ch01m. Both files contain exactly the same content, they -->
+			<!-- just have different names. -->
+			<!-- ================================================================================= -->
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>tomcat-war</id>
+						<goals>
+							<goal>war</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<warName>Studies#Java#HFServletsJSP#${project.artifactId}</warName>
+						</configuration>
+					</execution>
+					<execution>
+						<id>normal-war</id>
+						<goals>
+							<goal>war</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- ============================================================================================= -->
+			<!-- Tomcat Maven Plugin -->
+			<!-- This plugin will help deploy the war built from this pom out to -->
+			<!-- http://jeremyallenshepherd.com/Studies/Java/HFServletsJSP/ch02m/ -->
+			<!-- Run the goal tomcat7:deploy to do so. -->
+			<!-- ============================================================================================= -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<server>jeremyallenshepherd.com</server>
+					<url>http://jeremyallenshepherd.com/manager/text</url>
+					<path>/Studies/Java/HFServletsJSP/${project.artifactId}</path>
 				</configuration>
 			</plugin>
 		</plugins>
