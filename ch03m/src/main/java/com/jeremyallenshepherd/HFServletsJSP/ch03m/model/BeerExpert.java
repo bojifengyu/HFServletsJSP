@@ -1,6 +1,7 @@
 package com.jeremyallenshepherd.HFServletsJSP.ch03m.model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class takes a color argument and based on its value returns a {@link java.util.List List} of beer brands  
