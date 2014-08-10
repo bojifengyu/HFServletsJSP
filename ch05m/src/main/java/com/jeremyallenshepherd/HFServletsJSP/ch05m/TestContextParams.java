@@ -26,7 +26,7 @@ public class TestContextParams extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("Test Context Parameters<br>");
 		
-		Enumeration<?> contextParams = getServletContext().getInitParameterNames();
+		Enumeration<String> contextParams = getServletContext().getInitParameterNames();
 		while (contextParams.hasMoreElements()) {
 			String contextParam = (String) contextParams.nextElement();
 			out.print("<br>context param name = " + contextParam + "<br>");

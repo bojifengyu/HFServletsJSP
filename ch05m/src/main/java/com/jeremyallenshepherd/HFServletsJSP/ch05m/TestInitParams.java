@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Jeremy Shepherd
  */
 public class TestInitParams extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,7 +24,7 @@ public class TestInitParams extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("test init parameters<br>");
 		
-		Enumeration<?> initParams = getServletConfig().getInitParameterNames();
+		Enumeration<String> initParams = getServletConfig().getInitParameterNames();
 		while (initParams.hasMoreElements()) {
 			out.println("<br>param name = " + initParams.nextElement() + "<br>");
 		}
