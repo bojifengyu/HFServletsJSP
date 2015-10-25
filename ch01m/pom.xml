@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.jeremyallenshepherd.HFServletsJSP</groupId>
+	<groupId>com.jashepherd.HFServletsJSP</groupId>
 	<artifactId>ch01m</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
@@ -85,16 +85,18 @@
 			<!-- ============================================================================================= -->
 			<!-- Tomcat Maven Plugin -->
 			<!-- This plugin will help deploy the war built from this pom out to -->
-			<!-- http://jeremyallenshepherd.com/Studies/Java/HFServletsJSP/ch01m/ -->
-			<!-- Run the goal tomcat7:deploy to do so. -->
+			<!-- http://jashepherd.com/Studies/Java/HFServletsJSP/ch01m/ -->
+			<!-- prerequisite for success - you must have a server entry in your ~/.m2/settings.xml file with -->
+			<!-- the correct username and password -->
+			<!-- Run the goal tomcat7:deploy to deploy. -->
 			<!-- ============================================================================================= -->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<server>jeremyallenshepherd.com</server>
-					<url>http://jeremyallenshepherd.com/manager/text</url>
+					<server>jashepherd.com</server>
+					<url>http://jashepherd.com/manager/text</url>
 					<path>/Studies/Java/HFServletsJSP/${project.artifactId}</path>
 				</configuration>
 			</plugin>
